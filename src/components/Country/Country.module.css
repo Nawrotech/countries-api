@@ -1,0 +1,49 @@
+@media (min-width: 576px) {
+  .countryCard {
+    flex-basis: 45%;
+  }
+}
+
+@media (min-width: 1080px) {
+  .countryCard {
+    flex-basis: 30%;
+  }
+
+  .countriesDisplayContainer {
+    padding-inline: 1rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .countryCard {
+    flex-basis: 22%;
+  }
+}
+
+.countryCard {
+  overflow: hidden;
+}
+
+.countryCard__flag {
+  width: 100%;
+  min-height: 180px;
+  box-shadow: 0 2px 0.5rem rgba(0, 0, 0, 0.15);
+}
+
+.countryCard__generalInfo {
+  padding: 2rem 2rem;
+  font-weight: var(--fw-regular);
+}
+
+.countryCard__countryName {
+  margin-bottom: 1.25rem;
+}
+
+.countryCard__informationContainer {
+  display: grid;
+  gap: 0.5em;
+}
+
+.countryCard__information span {
+  font-weight: var(--fw-light);
+}

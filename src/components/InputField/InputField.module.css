@@ -1,0 +1,21 @@
+.inputSearchCountryContainer {
+  position: relative;
+  display: block;
+  max-width: 100%;
+}
+
+.inputSearchCountryContainer input {
+  padding: 1rem 2rem;
+  padding-left: 3rem;
+  width: 100%;
+  box-sizing: 2px;
+  border: none;
+}
+
+.icon {
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+}

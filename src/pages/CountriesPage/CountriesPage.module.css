@@ -1,0 +1,32 @@
+.filteringElements {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem 1.25rem;
+}
+
+@media (min-width: 576px) {
+  .filteringElements {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 1rem;
+  }
+}
+
+.countriesDisplayContainer {
+  padding-inline: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media (min-width: 576px) {
+  .countriesDisplayContainer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-inline: 3rem;
+  }
+}

@@ -1,0 +1,27 @@
+.header {
+  box-shadow: 0 2px 0.5rem rgba(0, 0, 0, 0.15);
+  background-color: var(--bg-white);
+}
+
+.header .wrapper {
+  padding: 1.5rem 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__heading {
+  font-size: 1rem;
+}
+
+.header__darkModeButton {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.header__darkModeButton span {
+  font-weight: var(--fw-regular);
+}
