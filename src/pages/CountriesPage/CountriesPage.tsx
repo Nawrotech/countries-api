@@ -4,18 +4,17 @@ import { Select } from "../../components/Select/Select";
 import { useState } from "react";
 import { TCountryPreview } from "../../types/countriesTypes";
 
-import { useCountries } from "../../hooks/useCountries";
-
 import style from "./CountriesPage.module.css";
 
-export const CountriesPage = () => {
-  const [filterBy, setFilterBy] = useState<string>("all");
+type Props = {
+  countries: TCountryPreview[];
+  setFilterBy: React.Dispatch<React.SetStateAction<string>>;
+};
+
+export const CountriesPage = ({ countries, setFilterBy }: Props) => {
   const [countryName, setCountryName] = useState("");
 
-  const { countries } = useCountries(filterBy);
-
   let filteredCountries = countries;
-
   if (countryName)
     filteredCountries = countries.filter((el) =>
       el.name.common.toLowerCase().includes(countryName)

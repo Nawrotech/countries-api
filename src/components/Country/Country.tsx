@@ -1,6 +1,6 @@
 import { TCountryPreview } from "../../types/countriesTypes";
 import style from "./Country.module.css";
-
+import { useNavigate } from "react-router-dom";
 type Props = {
   country: TCountryPreview;
 };
@@ -8,8 +8,13 @@ type Props = {
 export const Country = ({ country }: Props) => {
   const { name, population, region, capital, flags } = country;
 
+  const navigate = useNavigate();
+
   return (
-    <div className={`${style.countryCard} borr shadow`}>
+    <div
+      onClick={() => navigate(`/${name.common}`)}
+      className={`${style.countryCard} borr shadow`}
+    >
       <img
         className={style.countryCard__flag}
         src={flags.png}
