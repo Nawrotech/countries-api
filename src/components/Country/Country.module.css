@@ -4,8 +4,9 @@
 
 .countryCard__flag {
   width: 100%;
-  max-height: 180px;
-  object-fit: cover;
+  height: 180px;
+  object-fit: fill;
+
   box-shadow: 0 2px 0.5rem rgba(0, 0, 0, 0.15);
 }
 
@@ -29,26 +30,4 @@
 
 .countryCard:hover {
   cursor: pointer;
-}
-
-@media (min-width: 576px) {
-  .countryCard {
-    flex-basis: 45%;
-  }
-}
-
-@media (min-width: 1080px) {
-  .countryCard {
-    flex-basis: 30%;
-  }
-
-  .countriesDisplayContainer {
-    padding-inline: 1rem;
-  }
-}
-
-@media (min-width: 1440px) {
-  .countryCard {
-    flex-basis: 22%;
-  }
 }

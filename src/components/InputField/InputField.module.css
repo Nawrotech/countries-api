@@ -6,7 +6,7 @@
 
 .inputSearchCountryContainer input {
   padding: 1rem 2rem;
-  padding-left: 3rem;
+  padding-left: 5rem;
   width: 100%;
   box-sizing: 2px;
   border: none;
@@ -17,5 +17,5 @@
   left: 2rem;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 1rem;
+  font-size: 1.5rem;
 }

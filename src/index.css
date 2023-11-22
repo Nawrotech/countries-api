@@ -1,28 +1,23 @@
 :root {
-  /* 
-- Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
-- Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
-- White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)
-*/
+  --bg-dark-mode: hsl(207, 26%, 17%);
+  --text-dark-mode: hsl(0, 0%, 100%);
+  --elements-dark-mode: hsl(209, 23%, 22%);
 
-  /* colors */
   --font-clr-very-dark-blue: hsl(200, 15%, 8%);
   --input-dark-gray: hsl(0, 0%, 52%);
   --bg-very-light-gray: hsl(0, 0%, 98%);
   --bg-white: #fff;
 
-  /* font sizes */
   --fs-home-page: 0.875rem;
   --fs-details-page: 1rem;
 
-  /* font weights */
   --fw-light: 300;
   --fw-regular: 600;
   --fw-bold: 800;
 
   --ff-general: "Nunito Sans", serif;
-  /* shadow */
-  /* --shadow */
+
+  --space-sm: 0.5rem;
 }
 
 /* resets */
@@ -43,6 +38,7 @@ option {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 button:hover {
@@ -76,4 +72,22 @@ h4 {
 
 .shadow {
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15);
+}
+
+.spacing {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+body.darkMode {
+  background-color: var(--bg-dark-mode);
+}
+
+header.darkMode button {
+  color: var(--text-dark-mode);
+}
+
+.darkMode {
+  background-color: var(--elements-dark-mode);
+  color: var(--text-dark-mode);
 }

@@ -1,11 +1,18 @@
 import { Outlet } from "react-router-dom";
 import { Navigation } from "../components/Navigation/Navigation";
 
-export const AppLayout = () => {
+type Props = {
+  darkMode: boolean;
+  setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+export const AppLayout = ({ darkMode, setDarkMode }: Props) => {
   return (
-    <div>
-      <Navigation />
-      <Outlet />
-    </div>
+    <>
+      <Navigation darkMode={darkMode} setDarkMode={setDarkMode} />
+      <main>
+        <Outlet />
+      </main>
+    </>
   );
 };

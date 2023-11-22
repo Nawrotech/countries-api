@@ -9,9 +9,10 @@ import style from "./CountriesPage.module.css";
 type Props = {
   countries: TCountryPreview[];
   setFilterBy: React.Dispatch<React.SetStateAction<string>>;
+  darkMode: boolean;
 };
 
-export const CountriesPage = ({ countries, setFilterBy }: Props) => {
+export const CountriesPage = ({ countries, setFilterBy, darkMode }: Props) => {
   const [countryName, setCountryName] = useState("");
 
   let filteredCountries = countries;
@@ -21,18 +22,24 @@ export const CountriesPage = ({ countries, setFilterBy }: Props) => {
     );
 
   return (
-    <main>
-      <div className="container">
-        <div className={style.filteringElements}>
-          <InputField setCountryName={setCountryName} />
-          <Select setFilterBy={setFilterBy} />
-        </div>
-        <div className={style.countriesDisplayContainer}>
-          {filteredCountries?.map((country: TCountryPreview) => (
-            <Country key={country?.name?.common} country={country} />
-          ))}
-        </div>
+    <div className="container">
+      <div
+        className={`${style.filteringElements} ${
+          darkMode ? style.darkMode : ""
+        }`}
+      >
+        <InputField setCountryName={setCountryName} />
+        <Select setFilterBy={setFilterBy} />
       </div>
-    </main>
+      <div className={style.countriesDisplayContainer}>
+        {filteredCountries?.map((country: TCountryPreview) => (
+          <Country
+            darkMode={darkMode}
+            key={country?.name?.common}
+            country={country}
+          />
+        ))}
+      </div>
+    </div>
   );
 };

@@ -1,27 +1,42 @@
 import { Routes, Route } from "react-router-dom";
 import { CountriesPage } from "./pages/CountriesPage/CountriesPage";
-import { SingleCountryPage } from "./pages/SingleCountryPage";
+import { CountryPage } from "./pages/CountryPage/CountryPage";
 import { ErrorPage } from "./pages/ErrorPage";
 import { AppLayout } from "./pages/AppLayout";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useCountries } from "./hooks/useCountries";
 
 function App() {
   const [filterBy, setFilterBy] = useState<string>("all");
   const { countries } = useCountries(filterBy);
 
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    darkMode
+      ? document.body.classList.add("darkMode")
+      : document.body.classList.remove("darkMode");
+  }, [darkMode]);
+
   return (
     <Routes>
-      <Route path="/" element={<AppLayout />}>
+      <Route
+        path="/"
+        element={<AppLayout darkMode={darkMode} setDarkMode={setDarkMode} />}
+      >
         <Route
           index
           element={
-            <CountriesPage setFilterBy={setFilterBy} countries={countries} />
+            <CountriesPage
+              darkMode={darkMode}
+              setFilterBy={setFilterBy}
+              countries={countries}
+            />
           }
         />
         <Route
           path="/:country"
-          element={<SingleCountryPage countries={countries} />}
+          element={<CountryPage darkMode={darkMode} countries={countries} />}
         />
         <Route path="*" element={<ErrorPage />} />
       </Route>
