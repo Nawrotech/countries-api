@@ -41,8 +41,12 @@
 }
 
 @media (min-width: 768px) {
+  .countriesDisplayContainer {
+    gap: 1rem;
+  }
+
   .countriesDisplayContainer > * {
-    flex-basis: calc(33.33% - 2rem);
+    flex-basis: calc(33.33% - 1rem);
   }
 }
 

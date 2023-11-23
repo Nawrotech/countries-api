@@ -16,7 +16,9 @@ export const Country = ({ country, darkMode }: Props) => {
   return (
     <div
       onClick={() => navigate(`/${name.common}`)}
-      className={`${style.countryCard} ${darkMode ? "darkMode" : ""} borr `}
+      className={`${style.countryCard} ${
+        darkMode ? "darkMode" : ""
+      } borr shadow`}
     >
       <img
         className={style.countryCard__flag}

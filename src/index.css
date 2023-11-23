@@ -20,8 +20,6 @@
   --space-sm: 0.5rem;
 }
 
-/* resets */
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -58,8 +56,6 @@ h3,
 h4 {
   line-height: 1;
 }
-
-/* utils */
 
 .container {
   max-width: 1440px;

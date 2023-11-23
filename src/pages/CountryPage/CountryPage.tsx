@@ -57,13 +57,11 @@ export const CountryPage = ({ countries, darkMode }: Props) => {
           Back
         </button>
         <div className={style.countryDetailsCard__container}>
-          {/* <div className="img-container"> */}
           <img
             className={`${style.flag} shadow`}
             src={flags?.svg}
             alt={flags?.alt}
           />
-          {/* </div> */}
 
           <div className={style.countryDetailsCard__content}>
             <h2 className={style.countryName}>{name?.common}</h2>
