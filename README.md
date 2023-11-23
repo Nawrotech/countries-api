@@ -1,30 +1,31 @@
-# React + TypeScript + Vite
+# Frontend Mentor - REST Countries API with color theme switcher solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-Currently, two official plugins are available:
+Easily search for specific countries using the search bar. The application leverages a powerful search algorithm, allowing users to quickly find the countries they are interested in.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Region Filtering
 
-## Expanding the ESLint configuration
+Effortlessly filter countries by region. Whether you're interested in exploring countries in Asia, Europe, Africa, or any other region, GlobeExplorer makes it simple to narrow down your search.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Detailed Country Information
 
-- Configure the top-level `parserOptions` property like this:
+Get detailed information about each country, including its population, area, capital, languages spoken, and more. The application utilizes a REST Countries API to ensure up-to-date and accurate information.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### Responsive Design
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+GlobeExplorer is designed to provide a seamless experience across devices. Whether you're using a desktop computer, tablet, or smartphone, the application adapts to different screen sizes, ensuring a consistent and enjoyable user experience.
+
+## How to Use
+
+1. **Search**: Enter the name of the country you're looking for in the search bar.
+
+2. **Filter by Region**: Use the region filter to narrow down countries based on their geographical regions.
+
+3. **Explore Details**: Click on a country to access detailed information, providing insights into its geography, demographics, and more.
+
+## Get Started
+
+Visit [GlobeExplorer](https://explore-countries-api.netlify.app) to start your journey of discovering the world's countries. Explore, learn, and appreciate the diversity of our global community.
+
+GlobeExplorer - Where the world is just a click away!
