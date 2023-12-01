@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { CountriesPage } from "./pages/CountriesPage/CountriesPage";
-import { CountryPage } from "./pages/CountryPage/CountryPage";
+import { CountryDeatailsPage } from "./pages/CountryDetails/CountryDetailsPage";
 import { ErrorPage } from "./pages/ErrorPage";
 import { AppLayout } from "./pages/AppLayout";
 import { useState, useEffect } from "react";
@@ -36,7 +36,9 @@ function App() {
         />
         <Route
           path="/:country"
-          element={<CountryPage darkMode={darkMode} countries={countries} />}
+          element={
+            <CountryDeatailsPage darkMode={darkMode} countries={countries} />
+          }
         />
         <Route path="*" element={<ErrorPage />} />
       </Route>

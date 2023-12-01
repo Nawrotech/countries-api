@@ -2,14 +2,14 @@ import { useParams, useNavigate } from "react-router-dom";
 import { TCountryDetails } from "../../types/countriesTypes";
 import { CountryInformation } from "../../components/CountryInformation/CountryInformation";
 import { BiArrowBack } from "react-icons/bi";
-import style from "./CountryPage.module.css";
+import style from "./CountryDetailsPage.module.css";
 
 type Props = {
   countries: TCountryDetails[];
   darkMode: boolean;
 };
 
-export const CountryPage = ({ countries, darkMode }: Props) => {
+export const CountryDeatailsPage = ({ countries, darkMode }: Props) => {
   const { country } = useParams();
   const navigate = useNavigate();
 

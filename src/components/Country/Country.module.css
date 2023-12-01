@@ -12,7 +12,6 @@
 
 .countryCard__generalInfo {
   padding: 2rem 2rem;
-  font-weight: var(--fw-regular);
 }
 
 .countryCard__countryName {
@@ -22,10 +21,6 @@
 .countryCard__informationContainer {
   display: grid;
   gap: 0.5em;
-}
-
-.countryCard__information span {
-  font-weight: var(--fw-light);
 }
 
 .countryCard:hover {

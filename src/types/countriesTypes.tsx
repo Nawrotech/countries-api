@@ -2,13 +2,13 @@ export type TCountryPreview = {
   name: {
     common: string;
     official: string;
-    nativeName: {
-      [key: string]: {
+    nativeName: Record<
+      string,
+      {
         official: string;
         common: string;
-      };
-    };
-    // nativeName: { official: string; common: string }[];
+      }
+    >;
   };
   population: number;
   region: string;
@@ -23,12 +23,7 @@ export type TCountryPreview = {
 export type TCountryDetails = TCountryPreview & {
   subregion: string;
   borders: string[];
-  currencies: {
-    [key: string]: {
-      name: string;
-      symbol: string;
-    };
-  };
+  currencies: Record<string, { name: string; symbol: string }>;
   languages: {
     [key: string]: string;
   };
